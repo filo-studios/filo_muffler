@@ -4,7 +4,7 @@ lua54 'yes'
 
 name 'filo_muffler'
 author 'filo studios.'
-discord 'https://discord.gg/bErPEKvRXg'
+discord 'https://discord.gg/ReEE9HgA4c'
 repository 'https://github.com/blamefilo/filo_muffler'
 description 'Muffler Sound Swapper'
 version '1.0.1'

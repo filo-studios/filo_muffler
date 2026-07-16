@@ -112,7 +112,7 @@ Check your server's vehicle audio files or sound banks for available options.
 
 ## Support
 
-- **Discord**: [Join our Discord](https://discord.gg/bErPEKvRXg)
+- **Discord**: [Join our Discord](https://discord.gg/ReEE9HgA4c)
 - **Repository**: [GitHub](https://github.com/blamefilo/filo_muffler)
 - **Author**: filo studios.
 
