@@ -33,7 +33,7 @@ RegisterNetEvent('filo_muffler:client:openMenu', function(isCommand)
         description = 'Change vehicle\'s muffler sound.',
         onSelect = function()
             local input = lib.inputDialog('Muffler Sound', {
-                {type = 'input', label = 'Muffler Sound', description = 'Enter the muffler sound name', required = true}
+                { type = 'input', label = 'Muffler Sound', description = 'Enter the muffler sound name', required = true }
             })
             if not input then return end
 
@@ -196,8 +196,11 @@ end)
 
 lib.onCache('vehicle', function(vehicle)
     if not vehicle then return end
-    local netId = NetworkGetNetworkIdFromEntity(vehicle)
-    if GetStatebag(netId, 'mufflerSound') then return end
+    local vehicleObj = lib.vehicle:new(vehicle)
+    local mufflerStatebag = vehicleObj:get("mufflerSound")
+    if mufflerStatebag ~= nil then return end
+
+    local netId = vehicleObj.netId
     TriggerServerEvent('filo_muffler:server:checkVehicle', netId)
 end)
 

@@ -102,15 +102,15 @@ function SetVehicleData(plate, data)
 end
 
 function GetVehicleData(plate)
-    if not plate or plate == '' then return {} end
+    if not plate or plate == '' then return nil end
     while not tableReady and not tableError do Wait(0) end
-    
-    if not IsPlayerOwnedVehicle(plate) then return {} end
-    if tableError then return {} end
+
+    if not IsPlayerOwnedVehicle(plate) then return nil end
+    if tableError then return nil end
     if vehicles[plate] ~= nil then return vehicles[plate] end
 
     local data = LoadVehicleData(plate)
-    vehicles[plate] = data or {}
+    vehicles[plate] = data
 
     return vehicles[plate]
 end
